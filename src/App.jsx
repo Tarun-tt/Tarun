@@ -18,7 +18,8 @@ export default function App() {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
+        <BrowserRouter basename="/Tarun">
           <ToastProvider />
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
