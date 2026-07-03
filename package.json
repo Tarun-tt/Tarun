@@ -13,8 +13,8 @@
     "generate:components": "node scripts/generateTopicComponents.js",
     "generate:dsa": "node scripts/buildDsaProblems.js",
     "migrate:folders": "node scripts/migrateCourseFolders.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build && echo. > dist/.nojekyll",
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@babel/standalone": "^7.29.7",
